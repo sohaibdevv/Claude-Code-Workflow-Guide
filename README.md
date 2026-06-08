@@ -1,15 +1,9 @@
 <div align="center">
 
-# Claude Code — Practical patterns for real-world use
+# Claude Code Practical patterns for real-world use
 
 **A friendly guide for using Claude Code in projects and teams**
 *Workflows, tools, and guardrails that help you stay productive and in control.*
-
-[![Stars](https://img.shields.io/github/stars/vignesh2027/claude-best-practice?style=for-the-badge&color=gold)](https://github.com/vignesh2027/claude-best-practice/stargazers)
-[![Forks](https://img.shields.io/github/forks/vignesh2027/claude-best-practice?style=for-the-badge&color=blue)](https://github.com/vignesh2027/claude-best-practice/network)
-[![License](https://img.shields.io/github/license/vignesh2027/claude-best-practice?style=for-the-badge)](LICENSE)
-[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen?style=for-the-badge)](CONTRIBUTING.md)
-[![Last Updated](https://img.shields.io/badge/Updated-May%202026-purple?style=for-the-badge)]()
 
 > Practical, grounded guidance for working with Claude Code.
 
@@ -1699,6 +1693,6 @@ This repository is a living document. Contributions welcome.
 
 <div align="center">
 
-**If this helped you ship faster, give it a ⭐**
+**Thanks for Reading ☺**
 
 </div>
