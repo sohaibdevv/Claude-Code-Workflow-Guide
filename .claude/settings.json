@@ -1,0 +1,64 @@
+{
+  "model": "claude-sonnet-4-6",
+  "outputStyle": "concise",
+  "permissionMode": "default",
+
+  "allowedTools": [
+    "Read",
+    "Bash(git status)",
+    "Bash(git diff*)",
+    "Bash(git log*)",
+    "Bash(git branch*)",
+    "Bash(npm test*)",
+    "Bash(npm run lint*)",
+    "Bash(npm run typecheck*)",
+    "Bash(npx jest*)",
+    "Bash(find . *)",
+    "Bash(grep *)",
+    "Bash(ls *)"
+  ],
+
+  "blockedTools": [
+    "Bash(rm -rf /*)",
+    "Bash(git push --force*)",
+    "Bash(git reset --hard*)",
+    "Bash(eval*)",
+    "Bash(curl * | bash*)",
+    "Bash(wget * | sh*)"
+  ],
+
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "~/.claude/hooks/pre-bash-security.sh"
+          }
+        ]
+      }
+    ],
+    "PostToolUse": [
+      {
+        "matcher": "Edit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "~/.claude/hooks/post-edit-format.sh"
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "~/.claude/hooks/session-log.sh"
+          }
+        ]
+      }
+    ]
+  }
+}

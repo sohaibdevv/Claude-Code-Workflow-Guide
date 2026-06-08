@@ -1,0 +1,75 @@
+# [Project Name]
+
+## Overview
+[2-3 sentences: what this project does and who uses it]
+
+**Stack**: [Frontend] + [Backend] + [Database] + [Infra]
+**Stage**: [production / internal / prototype]
+
+## Development Commands
+
+```bash
+# Install
+npm install
+
+# Dev server
+npm run dev           # http://localhost:3000
+
+# Testing
+npm test              # all tests
+npm run test:watch    # watch mode
+npm run test:coverage # with coverage
+
+# Quality
+npm run lint          # ESLint
+npm run typecheck     # TypeScript
+
+# Database
+npm run db:migrate    # run pending migrations
+npm run db:seed       # seed dev data
+npm run db:reset      # drop + recreate + seed (local only)
+
+# Build
+npm run build         # production build
+```
+
+## Architecture
+
+**Auth**: [JWT / session / OAuth — describe approach and where logic lives]
+**Database access**: [ORM / query builder + pattern to follow]
+**API layer**: [REST / GraphQL / RPC — file organization pattern]
+**Error handling**: [Approach + where errors are defined]
+**Config**: [Environment variable pattern + where config lives]
+
+## Key Files
+
+- `src/config.ts` — all environment configuration
+- `src/types/index.ts` — global type definitions
+- `src/errors/index.ts` — custom error types
+- `src/auth/middleware.ts` — auth pattern reference
+- `src/routes/example.ts` — route pattern reference
+
+## Code Standards
+
+- [Language/runtime] [version]
+- [Type system rules if applicable]
+- [Async patterns]
+- [Import/export conventions]
+- [Test requirements]
+
+## Patterns to Follow
+
+Reference these files for patterns:
+- New API routes: follow `src/routes/users.ts`
+- New DB queries: follow `src/repositories/users.ts`
+- New services: follow `src/services/users.ts`
+- New tests: follow `tests/unit/users.test.ts`
+
+## NEVER
+
+- NEVER commit secrets, API keys, or credentials
+- NEVER merge with failing tests
+- NEVER skip migrations — never edit applied migrations
+- NEVER add `// @ts-ignore` without a comment explaining why
+- NEVER commit directly to main — always use a branch + PR
+- [Add your project's specific prohibited patterns]

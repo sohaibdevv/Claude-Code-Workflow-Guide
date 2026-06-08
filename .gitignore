@@ -1,0 +1,25 @@
+# Claude Code local settings (personal, not shared)
+.claude/settings.local.json
+
+# Environment files
+.env
+.env.local
+.env.*.local
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Node
+node_modules/
+npm-debug.log*
+
+# Logs
+*.log
+logs/
